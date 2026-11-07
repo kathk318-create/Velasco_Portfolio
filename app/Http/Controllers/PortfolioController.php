@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Response;
 use Illuminate\View\View;
 
 class PortfolioController extends Controller
@@ -11,6 +12,18 @@ class PortfolioController extends Controller
      */
     public function index(): View
     {
-        return view('portfolio');
+        return view('portfolio', [
+            'projects' => config('projects'),
+        ]);
+    }
+
+    /**
+     * Download the resume PDF.
+     */
+    public function downloadResume(): Response
+    {
+        $path = public_path('resume/resume.pdf');
+
+        return response()->download($path, 'resume.pdf');
     }
 }

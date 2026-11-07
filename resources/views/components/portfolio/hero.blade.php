@@ -23,6 +23,7 @@
         <div class="hero-actions mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a href="#projects" class="btn-primary">View My Work</a>
             <a href="#contact" class="btn-ghost">Get In Touch</a>
+            <a href="{{ route('resume.download') }}" class="btn-ghost" download>Download Resume</a>
         </div>
 
         <a href="#about" class="scroll-hint mt-16 inline-flex flex-col items-center gap-2 text-xs tracking-[0.25em] text-[#7d7590] uppercase transition-colors hover:text-[#c084fc]">

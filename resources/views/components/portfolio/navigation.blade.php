@@ -19,7 +19,7 @@
             <span class="nav-burger" aria-hidden="true"></span>
         </button>
 
-        <ul id="nav-menu" class="nav-menu fixed inset-0 z-40 flex-col items-center justify-center gap-8 bg-[#0b0a10]/95 backdrop-blur-md md:static md:flex md:flex-row md:translate-x-0 md:bg-transparent md:p-0 md:backdrop-blur-none">
+        <a href="{{ route('resume.download') }}" class="nav-link relative text-sm tracking-[0.15em] text-[#c9c2d6] uppercase transition-colors hover:text-[#d8b4fe]" download>Download Resume</a>
             @foreach ([
                 'about' => 'About',
                 'education' => 'Education',
