@@ -1,7 +1,7 @@
 # Deploying to Vercel
 
 1. Install Vercel CLI: `npm i -g vercel`
-2. Run `npm run build` to compile frontend assets into `public/build`.
+2. Run `npm run build` to compile frontend assets into `public/build`, then commit `public/build` (Vercel's static builder deploys those files as-is; it cannot see files built by the PHP runtime).
 3. Set environment variables in the Vercel dashboard (or via `vercel env add`):
    - `APP_KEY` (generate with `php artisan key:generate --show`)
    - `APP_ENV=production`
